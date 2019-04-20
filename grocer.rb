@@ -13,6 +13,12 @@ def consolidate_cart(cart)
   whole_cart
 end
 
+coupons = [
+  {:item => "AVOCADO", :num => 2, :cost => 5.00},
+  {:item => "BEER", :num => 2, :cost => 20.00},
+  {:item => "CHEESE", :num => 3, :cost => 15.00}
+]
+
 def apply_coupons(cart, coupons)
   # code here
 end
@@ -37,6 +43,12 @@ cart = [
   {"BEETS" => {:price => 2.50, :clearance => false}},
   {"AVOCADO" => {:price => 3.00, :clearance => true}},
   {"SOY MILK" => {:price => 4.50, :clearance => true}}
+]
+
+coupons = [
+  {:item => "AVOCADO", :num => 2, :cost => 5.00},
+  {:item => "BEER", :num => 2, :cost => 20.00},
+  {:item => "CHEESE", :num => 3, :cost => 15.00}
 ]
 
 consolidate_cart(cart)
