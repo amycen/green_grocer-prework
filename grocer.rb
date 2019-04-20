@@ -72,3 +72,4 @@ coupons = [
 
 ccart = consolidate_cart(cart)
 apply_coupons(ccart, coupons)
+apply_clearance(ccart)
