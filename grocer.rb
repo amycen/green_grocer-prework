@@ -2,7 +2,7 @@ require "pry"
 def consolidate_cart(cart)
   # code here
   whole_cart = cart.flatten
-      binding.pry
+  binding.pry
   cart.each do |item_hash|
     item_hash.each do |item, attrib|
       whole_cart[item] ||= {}
