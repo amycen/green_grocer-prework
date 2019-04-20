@@ -30,6 +30,7 @@ def apply_coupons(cart, coupons)
           :clearance => cart[item][:clearance],
           :count => 1
         }
+        binding.pry
       end
     end
   end
