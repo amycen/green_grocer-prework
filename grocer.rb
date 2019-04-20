@@ -22,9 +22,14 @@ coupons = [
 def apply_coupons(cart, coupons)
   # code here
   cart.each do |item, attrib|
-    coupons.find {|coupon| coupon[:item] == item}
+    coupons.each do |coupon|
       if item == coupon[:item]
-        attrib[:count] % coupon[:num]
+        cart[item][:count] = cart[item][:count] % coupon[:num]
+        cart["#{item} W/COUPON"] = {
+          :price => coupon[:cost],
+          :clearance => cart[item][:clearance],
+          :count => 1
+        }
 end
 
 def apply_clearance(cart)
