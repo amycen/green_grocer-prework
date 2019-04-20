@@ -51,6 +51,11 @@ def checkout(cart, coupons)
   cart = apply_clearance(cart)
   curr_total = 0
   cart.each do |item, attrib|
+    curr_total += cart[item][:price]
+  end
+  if curr_total > 100.0
+    cart.each do |item, attrib|
+      cart[item][:price] = (cart[item][:price] * 0.90).round(2)
 
 end
 
