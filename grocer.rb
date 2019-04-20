@@ -23,7 +23,7 @@ def apply_coupons(cart, coupons)
   # code here
   cart.clone.each do |item, attrib|
     coupons.each do |coupon|
-      if item == coupon[:item] && coupon[:num] == cart[item][:count]
+      if item == coupon[:item] && coupon[:num] >= cart[item][:count]
         cart[item][:count] = cart[item][:count] % coupon[:num]
         cart["#{item} W/COUPON"] = {
           :price => coupon[:cost],
