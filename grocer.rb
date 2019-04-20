@@ -60,4 +60,3 @@ def checkout(cart, coupons)
   #end
   curr_total
 end
-
