@@ -21,7 +21,7 @@ coupons = [
 
 def apply_coupons(cart, coupons)
   # code here
-  cart.each do |item, attrib|
+  cart.clone.each do |item, attrib|
     coupons.each do |coupon|
       if item == coupon[:item]
         cart[item][:count] = cart[item][:count] % coupon[:num]
