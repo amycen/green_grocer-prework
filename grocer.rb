@@ -3,7 +3,9 @@ def consolidate_cart(cart)
   whole_cart = {}
   cart.each do |item_hash|
     item_hash.each do |item, attrib|
-      item_hash[]
+      whole_cart[item] ||= {}
+      whole_cart[item][:count] ||= 0
+      whole_cart[item][:count] += 1
 end
 
 def apply_coupons(cart, coupons)
