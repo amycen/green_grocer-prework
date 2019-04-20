@@ -1,7 +1,7 @@
 require "pry"
 def consolidate_cart(cart)
   # code here
-  whole_cart = cart.flatten
+  whole_cart = cart.reduce Hash.new, :merge
   binding.pry
   cart.each do |item_hash|
     item_hash.each do |item, attrib|
