@@ -58,7 +58,7 @@ def checkout(cart, coupons)
       cart[item][:price] = (cart[item][:price] * 0.90).round(2)
     end
   end
-  cart
+  curr_total
 end
 
 cart = [
