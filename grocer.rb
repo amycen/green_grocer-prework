@@ -56,6 +56,7 @@ cart = [
   {"PEANUTBUTTER" => {:price => 3.00, :clearance => true}},
   {"BEETS" => {:price => 2.50, :clearance => false}},
   {"AVOCADO" => {:price => 3.00, :clearance => true}},
+  {"AVOCADO" => {:price => 3.00, :clearance => true}},
   {"SOY MILK" => {:price => 4.50, :clearance => true}}
 ]
 
