@@ -1,3 +1,4 @@
+require "pry"
 def consolidate_cart(cart)
   # code here
   whole_cart = {}
@@ -6,6 +7,7 @@ def consolidate_cart(cart)
       whole_cart[item] ||= {}
       whole_cart[item][:count] ||= 0
       whole_cart[item][:count] += 1
+      binding.pry
     end
   end
   whole_cart
