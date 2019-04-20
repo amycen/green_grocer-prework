@@ -38,4 +38,4 @@ cart = [
   {"SOY MILK" => {:price => 4.50, :clearance => true}}
 ]
 
-consolidate_cart(consolidate_cart)
+consolidate_cart(cart)
