@@ -8,7 +8,7 @@ def consolidate_cart(cart)
       whole_cart[item] ||= {}
       whole_cart[item][:count] ||= 0
       whole_cart[item][:count] += 1
-  
+
     end
   end
   whole_cart
