@@ -38,6 +38,8 @@ end
 
 def apply_clearance(cart)
   # code here
+  cart.each do |item, attrib|
+    cart[item][:price] *= .8 if cart[:clearance]
 end
 
 def checkout(cart, coupons)
