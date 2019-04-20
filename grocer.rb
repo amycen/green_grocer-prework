@@ -7,7 +7,8 @@ def consolidate_cart(cart)
     item_hash.each do |item, attrib|
       whole_cart[item] ||= {}
       whole_cart[item][:count] ||= 0
-      whole_cart[item][:count] += 1
+      curr_count = whole_cart[item][:count]
+      whole_cart[item][:count] = curr_count + 1
     end
   end
   whole_cart
