@@ -53,11 +53,11 @@ def checkout(cart, coupons)
   cart.each do |item, attrib|
     curr_total += cart[item][:price] * cart[item][:count]
   end
-  if curr_total > 100.0
-    cart.each do |item, attrib|
-      cart[item][:price] = (cart[item][:price] * 0.90).round(2)
-    end
-  end
+  curr_total = curr_total * 0.90.round(2) if curr_total > 100.0
+  #  cart.each do |item, attrib|
+  #    cart[item][:price] = (cart[item][:price] * 0.90).round(2)
+  #  end
+  #end
   curr_total
 end
 
