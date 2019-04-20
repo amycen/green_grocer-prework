@@ -39,7 +39,7 @@ end
 def apply_clearance(cart)
   # code here
   cart.each do |item, attrib|
-    cart[item][:price] = ()'%.2f' % (cart[item][:price] * 0.80).round(2)).to_f if cart[item][:clearance]
+    cart[item][:price] = ('%.2f' % (cart[item][:price] * 0.80).round(2)).to_f if cart[item][:clearance]
   end
   cart
   binding.pry
