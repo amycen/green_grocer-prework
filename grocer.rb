@@ -21,6 +21,10 @@ coupons = [
 
 def apply_coupons(cart, coupons)
   # code here
+  cart.each do |item, attrib|
+    coupons.find {|coupon| coupon[:item] == item}
+      if item == coupon[:item]
+        attrib[:count] % coupon[:num]
 end
 
 def apply_clearance(cart)
